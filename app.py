@@ -74,4 +74,4 @@ def predict(data : fraudDetection):
     elif predictions == 0:
         return {"The customer will refund his loan"}
 
-cc.run_app(app=app)
+# cc.run_app(app=app)
