@@ -85,7 +85,20 @@ if st.button("Detection Result"):
      "bureau_year":bureau_year
      }
 
-# if st.button("Detection Result"):
+     st.write(f"""### These are the transaction details:\n
+     First Name: {first_name}
+     Last Name: {last_name}
+     1. name_contract_type: {name_contract_type}\n
+     2. children_count: {children_count}\n
+     3. amt_income_total: {amt_income_total}$\n
+     4. fam_members: {fam_members}\n
+     5. region_rating: {region_rating}\n
+     6. DAYS_INSTALMENT_delay: {DAYS_INSTALMENT_delay}\n
+     7. amt_credit_sum: {amt_credit_sum}\n
+     8. bureau_year: {bureau_year}
+               """)
+
+#    if st.button("Detection Result"):
 #     values = {
 #     "step": step,
 #     "types": types,
@@ -96,30 +109,18 @@ if st.button("Detection Result"):
 #     "newbalancedest": newbalancedest,
 #     "isflaggedfraud": isflaggedfraud
 #     }
-
-
-    st.write(f"""### These are the transaction details:\n
-    First Name: {first_name}
-    Last Name: {last_name}
-    1. name_contract_type: {name_contract_type}\n
-    2. children_count: {children_count}\n
-    3. amt_income_total: {amt_income_total}$\n
-    4. fam_members: {fam_members}\n
-    5. region_rating: {region_rating}\n
-    6. DAYS_INSTALMENT_delay: {DAYS_INSTALMENT_delay}\n
-    7. amt_credit_sum: {amt_credit_sum}\n
-    8. bureau_year: {bureau_year}
-               """)
-
-    res = re.post(f"https://creditcopytest-production.up.railway.app/predict",json=values)
-    json_str = json.dumps(res.json())
-    resp = json.loads(json_str)
+   
+   
+   
+     res = re.post(f"https://creditcopytest-production.up.railway.app/predict",json=values)
+     json_str = json.dumps(res.json())
+     resp = json.loads(json_str)
     
     
     
-    if first_name=='' or last_name == '':
+     if first_name=='' or last_name == '':
          st.write("Error! Please input Transaction ID or Names of Sender and Receiver!")
-    else:
+     else:
          st.write(f"{resp[0]}")
     
     
