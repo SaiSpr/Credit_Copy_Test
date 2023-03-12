@@ -40,14 +40,14 @@ async def favicon():
 #     isflaggedfraud:float
 
 class fraudDetection(BaseModel):
-    name_contract_type: int 
-    children_count: int
-    fam_members: int
-    amt_credit_sum: float
-    DAYS_INSTALMENT_delay: float
-    amt_income_total: float
-    credit_active: int
-    bureau_year: int
+    NAME_CONTRACT_TYPE: int 
+    CNT_CHILDREN: int
+    CNT_FAM_MEMBERS: int
+    AMT_CREDIT: float
+    PREV_APPL_MEAN_INSTALL_MEAN_DAYS_INSTALMENT: float
+    AMT_INCOME_TOTAL: float
+    PREV_APPL_MEAN_AMT_CREDIT: int
+    AMT_REQ_CREDIT_BUREAU_YEAR: int
 
 # @app.post('/predict')
 # def predict(data : fraudDetection):
@@ -64,8 +64,8 @@ class fraudDetection(BaseModel):
 @app.post('/predict')
 def predict(data : fraudDetection):
                                                                                                                                                                                                                                 
-    features = np.array([[data.name_contract_type, data.children_count, data.fam_members, data.amt_credit_sum,
-                          data.DAYS_INSTALMENT_delay, data.amt_income_total, data.credit_active, data.bureau_year]])
+    features = np.array([[data.NAME_CONTRACT_TYPE, data.CNT_CHILDREN, data.CNT_FAM_MEMBERS, data.AMT_CREDIT,
+                          data.PREV_APPL_MEAN_INSTALL_MEAN_DAYS_INSTALMENT, data.AMT_INCOME_TOTAL, data.PREV_APPL_MEAN_AMT_CREDIT, data.AMT_REQ_CREDIT_BUREAU_YEAR]])
     
 
     predictions = model.predict(features)
