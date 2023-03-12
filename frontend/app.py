@@ -8,9 +8,8 @@ st.image("image.png")
 
 st.write("""
 ## About
-Credit card fraud is a form of identity theft that involves an unauthorized taking of another's credit card information for the purpose of charging purchases to the account or removing funds from it.
-
-**This Streamlit App utilizes a Machine Learning API in order to detect fraudulent credit card  based on the following criteria: hours, type of transaction, amount, balance before and after transaction etc.** 
+By offering a satisfying and secure borrowing experience, Home Credit aims to increase financial inclusion for the unbanked population. Home Credit uses a range of alternative data sources, including as telecom and transactional information, to estimate their clients' repayment capacities in order to ensure that this underserved demographic has a favourable lending experience.**
+""") 
 
 
 st.sidebar.header('Input Features of The Transaction')
