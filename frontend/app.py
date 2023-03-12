@@ -4,7 +4,7 @@ import requests as re
 
 st.title("Credit Card Fraud Detection Web App")
 
-st.image("image.png")
+st.image("image.jpg")
 
 st.write("""
 ## About
