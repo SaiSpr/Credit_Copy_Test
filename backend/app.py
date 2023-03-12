@@ -13,7 +13,7 @@ app = FastAPI(
     version="1.0.0", debug=True)
 
 
-model = joblib.load('best_model_catboost.pkl')
+model = joblib.load('lgbshap.pkl')
 
 @app.get("/", response_class=PlainTextResponse)
 async def running():
