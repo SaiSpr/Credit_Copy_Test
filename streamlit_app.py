@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import requests as re
 
-st.title("Credit Card Fraud Detection Web App")
+st.title("Credit Card Probability Web App")
 
 st.image("image.png")
 
