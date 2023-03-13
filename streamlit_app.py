@@ -86,14 +86,14 @@ Having poor or no credit history makes it difficult for many people to get loans
     
     
 #Chargement des données
-@st.cache
+# @st.cache
 def load_data(file_name):
     data = joblib.load(file_name)
     return data
 df = load_data("data_customers.pkl")
 
 # Chargement du modèle
-@st.cache(hash_funcs={'xgboost.sklearn.XGBClassifier': id})
+# @st.cache(hash_funcs={'xgboost.sklearn.XGBClassifier': id})
 def load_model(file_name):
     model = joblib.load(file_name)
     return model
