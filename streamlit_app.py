@@ -154,30 +154,30 @@ amt_income_total = str(int(df_customer["AMT_INCOME_TOTAL"].item())) + " $"
 score = str(round(df_customer["SCORE"].item()*100)) + "%"
 target = "Non Eligible" if df_customer["TARGET"].item() == 1 else "Eligible"
 
-st.write("ID client :", id_customer)
-st.write("Sexe :", code_gender)
-st.write("Age : " + str(date) + " ans")
-st.write("Type de contrat :", name_type_contract)
-st.write("Nombre d'enfants :", cnt_children)
-st.write("Revenu total :", amt_income_total)
-st.write("Probabilité de défaut :", score)
-st.write("Statut du client :", target)
+# st.write("ID client :", id_customer)
+# st.write("Sexe :", code_gender)
+# st.write("Age : " + str(date) + " ans")
+# st.write("Type de contrat :", name_type_contract)
+# st.write("Nombre d'enfants :", cnt_children)
+# st.write("Revenu total :", amt_income_total)
+# st.write("Probabilité de défaut :", score)
+# st.write("Statut du client :", target)
 
-#Affichage des informations du client unique
-df_customer = df[["SK_ID_CURR", "NAME_CONTRACT_TYPE"
-                  , "CODE_GENDER", "AMT_INCOME_TOTAL"
-                  ,"CNT_CHILDREN","DAYS_BIRTH"
-                  ,"SCORE","TARGET"]]
-df_customer = df_customer[df_customer['SK_ID_CURR'] == id_customer]
+# #Affichage des informations du client unique
+# df_customer = df[["SK_ID_CURR", "NAME_CONTRACT_TYPE"
+#                   , "CODE_GENDER", "AMT_INCOME_TOTAL"
+#                   ,"CNT_CHILDREN","DAYS_BIRTH"
+#                   ,"SCORE","TARGET"]]
+# df_customer = df_customer[df_customer['SK_ID_CURR'] == id_customer]
 
 
-date = "Non renseigné" if len(df_customer['DAYS_BIRTH']) == 0 else round(-df_customer['DAYS_BIRTH'].item()/365)
-name_type_contract = "Revolving loans" if df_customer["NAME_CONTRACT_TYPE"].item() == 1 else "Cash loans"
-code_gender = "Femme" if df_customer["CODE_GENDER"].item() == 1 else "Homme"
-cnt_children = df_customer["CNT_CHILDREN"].item()
-amt_income_total = str(int(df_customer["AMT_INCOME_TOTAL"].item())) + " $"
-score = str(round(df_customer["SCORE"].item()*100)) + "%"
-target = "Non Eligible" if df_customer["TARGET"].item() == 1 else "Eligible"
+# date = "Non renseigné" if len(df_customer['DAYS_BIRTH']) == 0 else round(-df_customer['DAYS_BIRTH'].item()/365)
+# name_type_contract = "Revolving loans" if df_customer["NAME_CONTRACT_TYPE"].item() == 1 else "Cash loans"
+# code_gender = "Femme" if df_customer["CODE_GENDER"].item() == 1 else "Homme"
+# cnt_children = df_customer["CNT_CHILDREN"].item()
+# amt_income_total = str(int(df_customer["AMT_INCOME_TOTAL"].item())) + " $"
+# score = str(round(df_customer["SCORE"].item()*100)) + "%"
+# target = "Non Eligible" if df_customer["TARGET"].item() == 1 else "Eligible"
 
 st.write("ID client :", id_customer)
 st.write("Sexe :", code_gender)
