@@ -5,6 +5,7 @@ import numpy as np
 import streamlit.components.v1 as components
 import joblib
 import xgboost
+import pandas as pd
 
 
 st.title("Credit Card Probability Web App")
