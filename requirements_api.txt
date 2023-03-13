@@ -12,3 +12,4 @@ pydantic==1.9.1
 httptools
 uvloop
 lightgbm
+xgboost
