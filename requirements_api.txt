@@ -13,3 +13,4 @@ httptools
 uvloop
 lightgbm
 xgboost
+pandas
