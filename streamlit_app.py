@@ -131,12 +131,56 @@ df_group = df_group[df_group["NAME_CONTRACT_TYPE"] != contract_filter]
 #Sélection du client à étudier
 st.sidebar.title('Sélectionnez un client')
 
+
 # Filtre FINAL SK_ID_CURR
 list_id = df_group['SK_ID_CURR'].unique().tolist()
 id_customer = st.sidebar.selectbox('ID du client  :', list_id)
 count_customers = df_group.shape[0]
 # st.sidebar.write('Nombre de clients correspondant à vos filtres :', count_customers)
 st.sidebar.write(count_customers, 'clients correspondant à vos filtres')
+
+
+
+
+
+
+
+
+
+
+
+
+
+# values = {
+#      "id_customer": id_customer
+#      }
+
+
+
+# res = re.post(f"https://creditcopytest-production.up.railway.app/predict",json=values)
+# json_str = json.dumps(res.json())
+# resp = json.loads(json_str)
+    
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 
 #Affichage des informations du client unique
 df_customer = df[["SK_ID_CURR", "NAME_CONTRACT_TYPE"
