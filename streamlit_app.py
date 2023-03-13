@@ -168,3 +168,6 @@ if target == "Eligible":
     st.write("Customer is eligible for loan")
 else:
     st.write("Customer is not eligible for loan")
+  
+st.title('Model Summary')
+st.image("waterfall_plot.png", caption='Result Summary')
