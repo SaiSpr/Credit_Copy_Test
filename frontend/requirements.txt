@@ -4,3 +4,4 @@ streamlit
 lightgbm
 joblib
 xgboost
+pandas
