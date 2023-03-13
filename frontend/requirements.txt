@@ -1,6 +1,6 @@
-numpy==1.21.6
-requests==2.23.0
-streamlit==1.10.0
+numpy
+requests
+streamlit
 lightgbm
 joblib
 xgboost
